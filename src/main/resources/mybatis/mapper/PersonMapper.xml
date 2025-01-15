@@ -24,6 +24,7 @@
 		parameterType="com.example.demo.mybatis.entity.Person">
 		update person
 		set 
+			<!-- ★ifタグ等を活用し、動的SQLを実現 -->
 			<if test="name != null and name != ''">
 				and name = #{name}
 			</if>
